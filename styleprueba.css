@@ -1,0 +1,342 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    background: #fdfaf6;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Menú lateral */
+aside {
+    width: 220px;
+    min-height: 100vh;
+    background: linear-gradient(#e4d9c5, #d3bfa6);
+    color: #333;
+    padding: 20px;
+    border-right: 4px solid #c9a368;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex: none;
+}
+
+aside h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #7b4b2a;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #5a3d2b;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-menu a:hover {
+    color: #b25d3b;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+main h2 {
+    margin-bottom: 10px;
+    color: #7b4b2a;
+    border-bottom: 2px solid #c9a368;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Subtítulo de skills */
+#about h4 {
+    font-size: 1.25rem;
+    color: #b25d3b;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    margin-top: 24px;
+    text-align: center;
+    background: linear-gradient(90deg, #f7c59f 0%, #a3c9e2 100%);
+    padding: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(163,201,226,0.10);
+}
+
+/* Skills como botones */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    list-style: none;
+    margin-bottom: 24px;
+    justify-content: center;
+
+}
+
+ul li {
+    background: #a3c9e2;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(163,201,226,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+ul li:hover {
+    background: #f7c59f;
+    color: #7b4b2a;
+    transform: scale(1.08);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+form label {
+    font-weight: 700;
+    color: #7b4b2a;
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+form input, form textarea {
+    background: #f8f7f4;
+    border: 2px solid #a3c9e2;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #2d2d2d;
+    transition: border 0.2s;
+    font-family: inherit;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #f7c59f;
+    outline: none;
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+form input[type="submit"], form button, input[type="button"] {
+    background: #a3c9e2;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(163,201,226,0.12);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover, form button:hover, input[type="button"]:hover {
+    background: #f7c59f;
+    color: #7b4b2a;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 15px;
+    border-top: 2px solid #c9a368;
+    text-align: center;
+    color: #5a3d2b;
+    background-color: #e4d9c5;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    border-radius: 0 0 12px 12px;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #7b4b2a;
+    font-weight: bold;
+}
+
+/* Botones de editar y eliminar comentarios */
+.comment-box button {
+    background: #a3c9e2;
+    color: #fff;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 8px;
+    box-shadow: 0 2px 6px rgba(163,201,226,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.comment-box button:last-child {
+    margin-right: 0;
+}
+
+.comment-box button.edit-btn {
+    background: #f7c59f;
+    color: #7b4b2a;
+}
+
+.comment-box button.delete-btn {
+    background: #b25d3b;
+    color: #fff;
+}
+
+.comment-box button:hover {
+    transform: scale(1.07);
+    opacity: 0.85;
+}
+
+/* Comentarios publicados */
+.comment-box {
+    background: linear-gradient(90deg, #e4d9c5 60%, #a3c9e2 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(163,201,226,0.13);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    text-align: left;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-left: 5px solid #b25d3b;
+}
+
+.comment-box strong {
+    color: #7b4b2a;
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.comment-box .comment-text {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.comment-box:hover {
+    box-shadow: 0 6px 24px rgba(163,201,226,0.22);
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* Artículos */
+section article {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(163,201,226,0.13);
+    padding: 28px 24px;
+    margin-bottom: 28px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+}
+
+section article:hover {
+    box-shadow: 0 8px 32px rgba(163,201,226,0.22);
+    transform: translateY(-4px) scale(1.02);
+}
+
+section article h3 {
+    color: #7b4b2a;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+section article p {
+    color: #333;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Centrar texto en los artículos */
+section article {
+    text-align: center;
+}
+
+section article h3,
+section article p {
+    text-align: center;
+}
+
+/* Imagen de perfil en About Me */
+#about article img {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #a3c9e2;
+    box-shadow: 0 4px 18px rgba(163,201,226,0.18);
+    background: linear-gradient(135deg, #f7c59f 40%, #a3c9e2 100%);
+}
+
+/* Imagen de proyectos */
+#projects article img {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 90%;
+    max-width: 340px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid #f7c59f;
+    box-shadow: 0 4px 18px rgba(163,201,226,0.15);
+    background: linear-gradient(90deg, #a3c9e2 60%, #f7c59f 100%);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
